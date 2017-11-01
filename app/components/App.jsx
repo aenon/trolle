@@ -2,20 +2,35 @@ import React from 'react'
 import uuid from 'uuid'
 import Notes from './Notes'
 
-const notes = [
-  {
-    id: uuid.v4(),
-    task: 'Learn Javascript'
-  },
-  {
-    id: uuid.v4(),
-    task: 'Learn more Javascript'
-  }
-]
+// use function (render) based solution here
+// alternative: use class
 
-export default () => (
-  <div>
-    <Notes notes={notes} />
-    <button onClick={() => console.log('add note')}> + </button>
-  </div>
-)
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      notes: [
+        {
+          id: uuid.v4(),
+          task: 'Learn JS'
+        },
+        {
+          id: uuid.v4(),
+          task: 'Learn more JS'
+        }
+      ]
+    }
+  }
+  render() {
+    const {notes} = this.state;
+
+    return (
+      <div>
+        {/*onClick = a function. () => : no args*/}
+        <Notes notes={notes} />
+        <button onClick={() => console.log('add note')}> + </button>
+      </div>
+    )
+  }
+}
