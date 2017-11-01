@@ -27,10 +27,22 @@ export default class App extends React.Component {
 
     return (
       <div>
-        {/*onClick = a function. () => : no args*/}
         <Notes notes={notes} />
-        <button onClick={() => console.log('add note')}> + </button>
+        {/*onClick = a function. () => : no args*/}
+        {/*addNote defined below*/}
+        <button onClick={this.addNote}> + </button>
       </div>
     )
+  }
+  addNote = () => {
+    // using functional style
+    // setState({new state here}, () => ... )
+    this.setState({
+      // add the new note after the existing notes
+      notes: this.state.notes.concat([{
+        id: uuid.v4(),
+        task: 'New task!'
+      }])
+    })
   }
 }
