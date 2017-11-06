@@ -35,7 +35,7 @@ export default class App extends React.Component {
           />
         {/*onClick = a function. () => : no args*/}
         {/*addNote defined below*/}
-        <button onClick={this.addNote}> + </button>
+        <button className="add-note" onClick={this.addNote}> + </button>
       </div>
     )
   }
