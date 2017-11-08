@@ -3,3 +3,6 @@ build/
 coverage/
 .eslintcache
 package-lock.json
+
+# bitballoon files
+*.bitballoon
