@@ -7,13 +7,14 @@ body {
 .add-note {
   background-color: #f3f3f3;
   border: 1px solid #ccc;
+  margin: .5em;
 }
 
 .notes {
   margin: 0.5em;
   padding-left: 0;
 
-  max-width: 10em;
+  max-width: 15em;
   list-style: none;
 }
 
